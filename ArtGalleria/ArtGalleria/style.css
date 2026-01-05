@@ -1,0 +1,1637 @@
+@font-face {
+    font-family: 'Seasons-Regular';
+    src: url('fonts/The_Seasons_Font/Fontspring-DEMO-theseasons-reg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'League-Spartan';
+    src: url('fonts/League_Spartan/LeagueSpartan-SemiBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM-Sans';
+    src: url('fonts/DM_Sans/DMSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'League-Spartan';
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #26323b;
+    font-size: 23px;
+}
+
+/* Hero Section */
+.hero button {
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+    margin-top: -5%;
+    margin-bottom: -3%;
+}
+
+.hero-text {
+    font-size: 5rem;
+    line-height: 1;
+    font-family: 'Seasons-Regular';
+    font-weight: normal;
+    color: #26323b;
+}
+
+.hero-cta {
+    text-align: right;
+}
+
+.hero-cta h2 {
+    font-family: 'League-Spartan';
+    font-size: 2.5rem;
+    color: #26323b;
+}
+
+.hero-cta .auction-btn,
+header,
+body {
+    font-family: 'DM-Sans';
+}
+
+.hero-cta .auction-btn {
+    background-color: #1a2b58;
+    color: #fff;
+    padding: 15px 54px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-cta .auction-btn:hover {
+    background-color: #333;
+}
+
+.featured-image img {
+    width: 100%;
+    height: auto;
+}
+
+.featured-art img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    object-fit: cover; 
+}
+
+/* Our Goal Section */
+
+.goal-section {
+    background-color: #ff7043;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+}
+
+.goal-section h3 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-family: 'Seasons-Regular';
+}
+
+.goal-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'DM-Sans';
+}
+
+/* Art Appreciation Section */
+
+.art-appreciation-section {
+    padding: 3rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.art-appreciation-section h3 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #333;
+    font-family: 'Seasons-Regular';
+}
+
+.art-appreciation-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.art-appreciation-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-appreciation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.art-appreciation-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.art-appreciation-card-body {
+    padding: 1rem;
+}
+
+.art-appreciation-card-body h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-family: 'League-Spartan';
+}
+
+.art-appreciation-card-body p {
+    color: #777;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-family: 'DM-Sans';
+
+}
+
+.error {
+    color: #ff4d4d;
+    background-color: #ffe6e6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ff4d4d;
+    border-radius: 5px;
+}
+
+.error-container {
+    margin-bottom: 10px;
+}
+
+.success {
+    color: #4CAF50;
+    background-color: #e6ffe6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+}
+
+/* Register Page */
+.register-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    padding-right: 8%;
+    background: url('images/register.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.register-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(49, 7, 88, 0.842);
+    max-width: 400px;
+    width: 100%;
+}
+
+.register-form h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #26323b;
+}
+
+.register-form h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #c2c2c2;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-form .role-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.register-form .role-toggle label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.register-form .role-toggle input[type="checkbox"] {
+    width: 50px;
+    height: 25px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ddd;
+    border-radius: 25px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-form .role-toggle input[type="checkbox"]:checked {
+    background-color: #1a2b58;
+}
+
+.register-form .role-toggle input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+
+.register-form .role-toggle input[type="checkbox"]:checked::before {
+    left: 25px;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a2b58;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: #333;
+}
+
+.register-form .back-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #1a2b58;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.register-form .back-link:hover {
+    color: #333;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.login-link a {
+    color: #1a2b58;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #333;
+}
+
+/* Login Page */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/login.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(20, 31, 94, 0.952);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #26323b;
+}
+
+.login-form h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #c2c2c2;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a2b58;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #333;
+}
+
+.login-form .back-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #1a2b58;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.login-form .back-link:hover {
+    color: #333;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.register-link a {
+    color: #1a2b58;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #333;
+}
+
+/* Verify Code Page */
+
+body.verify-page{
+    font-family: 'DM-Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+.verification-page .verification-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.verification-page h2 {
+    color: #333;
+}
+
+.verification-page p {
+    color: #666;
+    font-size: 14px;
+}
+
+.verification-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.verification-page label {
+    font-weight: bold;
+    color: #333;
+}
+
+.verification-page input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.verification-page button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.verification-page button:hover {
+    background-color: #0056b3;
+}
+
+.verification-page .resend {
+    margin-top: 15px;
+}
+
+.verification-page .resend a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.verification-page .resend a:hover {
+    text-decoration: underline;
+}
+
+/* Buyer Dashboard Page */
+.buyer-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Header layout */
+.buyer-dashboard-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.buyer-dashboard-header h1 {
+    margin: 0; 
+    font-size: 24px; 
+}
+
+
+/* Sidebar */
+
+.buyer-dashboard-sidebar {
+    width: 250px;
+    height: 100vh;
+    background: url('images/buyer_db.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.menu-links {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.buyer-dashboard-sidebar h2 {
+    color: #f5f5f5;
+    font-family: 'Seasons-Regular';
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.buyer-dashboard-sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.buyer-dashboard-sidebar a:hover {
+    background-color: #3333338a;
+    color: #fff;
+}
+
+.logout-container {
+    margin-top: auto; 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px; 
+}
+
+
+.logout-btn {
+    margin-top: auto; 
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+}
+
+
+/* Main Content */
+.buyer-dashboard-main-content {
+    flex: 1;
+    padding: 50px;
+    background-color: #f5f5f5;
+    margin-left: 290px;
+}
+
+.buyer-dashboard-main-content h1 {
+    margin-bottom: 20px;
+    color: #0e1115;
+    font-size: 50px;
+}
+
+/* Auction Section */
+
+.auction-title {
+    background: #1a2b58; 
+    padding: 15px;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.buyer-dashboard-auction-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buyer-dashboard-auction-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.buyer-dashboard-auction-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+    flex-wrap: wrap;
+}
+
+.buyer-dashboard-auction-card:hover {
+    transform: translateY(-5px);
+}
+
+.buyer-dashboard-auction-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.buyer-dashboard-auction-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.buyer-dashboard-auction-card p {
+    color: #666;
+}
+
+.buyer-dashboard-auction-card button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buyer-dashboard-auction-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Bid Tracking */
+.buyer-dashboard-bid-tracking {
+    margin-top: 30px;
+}
+
+.buyer-dashboard-bid-tracking table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.buyer-dashboard-bid-tracking th, .buyer-dashboard-bid-tracking td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.buyer-dashboard-bid-tracking th {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.buyer-dashboard-bid-tracking th {
+    text-align: left; 
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Auto-Bidding & Payment Section */
+.buyer-dashboard-auto-bidding, .buyer-dashboard-payment-section {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buyer-dashboard-auto-bidding h2, .buyer-dashboard-payment-section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.buyer-dashboard-auto-bidding input, .buyer-dashboard-payment-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buyer-dashboard-auto-bidding button, .buyer-dashboard-payment-section button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buyer-dashboard-auto-bidding button:hover, .buyer-dashboard-payment-section button:hover {
+    background-color: #218838;
+}
+
+button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Notification dropdown */
+.notification-dropdown {
+    position: relative;
+    margin-left: auto; 
+}
+
+#notificationButton {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.notification-dropdown button {
+    background: none;
+    border: none;
+    font-size: 24px; 
+    cursor: pointer;
+}
+
+.notification-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+}
+
+.notification-content h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.notification-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.notification-content li.unread {
+    font-weight: bold;
+    background: #f8f9fa;
+}
+
+.notification-content li.read {
+    color: #777;
+}
+
+/* Show dropdown if active */
+.notification-dropdown.active .notification-content {
+    display: block;
+}
+
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content { 
+    background: white; 
+    padding: 20px; 
+    margin: 10% auto; 
+    width: 50%; 
+    border-radius: 10px; 
+    position: relative; 
+}
+
+#modalImage {
+    max-width: 200px; 
+    max-height: 200px; 
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.close { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
+/* Auction History */
+.buyer-dashboard-auction-history {
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+.auction-history-container {
+    overflow-x: auto;
+    
+}
+
+.auction-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.auction-history-table th, 
+.auction-history-table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.auction-history-table th {
+    background: #1a2b58;
+    color: white;
+}
+
+.auction-history-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+.auction-history-table tr:hover {
+    background: #f9f9f9;
+}
+
+.no-history {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+    padding: 15px;
+}
+
+/* Seller Dashboard Page */
+
+body.seller-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-right: 8%;
+    background: url('images/seller_db.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+}
+
+.seller-dashboard {
+    max-width: 90%; 
+    width: 1200px; 
+    min-height: 80vh; 
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'League-Spartan';
+}
+
+.seller-dashboard h2 {
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'DM-Sans';
+    font-size: 40px;
+}
+
+.seller-dashboard .add-auction-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background: #201b28;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.seller-dashboard .add-auction-btn:hover {
+    background: #0056b3;
+    
+}
+
+/* Auction Tables */
+.auction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.auction-table th, .auction-table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.auction-table th {
+    background: #1a2b58;
+    color: white;
+    font-weight: bold;
+}
+
+.auction-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.auction-table tr:hover {
+    background: #e9ecef;
+}
+
+.auction-img {
+    width: 80px;  
+    height: auto; 
+}
+
+/* Action Buttons */
+.auction-actions a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.auction-actions .edit-btn {
+    background: #28a745;
+    color: white;
+}
+
+.auction-actions .edit-btn:hover {
+    background: #218838;
+}
+
+.auction-actions .delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.auction-actions .delete-btn:hover {
+    background: #c82333;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a2b58;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Logout Button */
+.logout-btn {
+    position: bottom;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: #f38c8c;
+    transform: scale(1.1);
+}
+
+/* Add Auction Page */
+body.add-auction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/buyer_db.png') no-repeat center center fixed;
+    background-size: cover; 
+    font-family: 'League-Spartan';
+}
+
+.add-auction-box {
+    width: 500px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.add-auction-box h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: 'Seasons-Regular';
+    margin-bottom: 20px;
+}
+
+.add-auction-box label {
+    display: block;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-auction-box input,
+.add-auction-box textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.add-auction-box textarea {
+    resize: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #201b28;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+    cursor: pointer;
+}
+
+.back-btn {
+    display: block;
+    width: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Edit Auction Page Styles */
+
+body.edit-auction-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/buyer_db.png') no-repeat center center fixed;
+    background-size: cover; 
+    font-family: 'League-Spartan';
+}
+
+.edit-auction-container {
+    width: 500px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #f5f5f5;
+}
+
+.edit-auction-container h2 {
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: 'DM-Sans';
+}
+
+.edit-auction-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-auction-container input[type="text"],
+.edit-auction-container input[type="number"],
+.edit-auction-container textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    resize: vertical;
+}
+
+.edit-auction-container input[type="text"]:focus,
+.edit-auction-container input[type="number"]:focus,
+.edit-auction-container textarea:focus {
+    outline: none;
+    border-color: #1a2b58;
+    background-color: #fff;
+}
+
+.edit-auction-container textarea {
+    height: 120px;
+}
+
+.edit-auction-container button[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #1a2b58;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-auction-container button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.edit-auction-container button[type="submit"]:active {
+    background-color: #004085;
+}
+
+.edit-auction-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-auction-container a {
+    text-decoration: none;
+    color: #d2d8eba4;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+.edit-auction-container a:hover {
+    color: #cfcfcf;
+}
+
+@media (max-width: 768px) {
+    .edit-auction-container {
+        padding: 15px;
+    }
+
+    .edit-auction-container h2 {
+        font-size: 20px;
+    }
+
+    .edit-auction-container input[type="text"],
+    .edit-auction-container input[type="number"],
+    .edit-auction-container textarea {
+        font-size: 14px;
+    }
+
+    .edit-auction-container button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+
+/* Admin Dashboard Page */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.admin-dashboard-sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #201b28;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.admin-dashboard-title {
+    color: #f5f5f5;
+    font-size: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Seasons-Regular';
+}
+
+/* Sidebar Links */
+.admin-menu-links {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.admin-nav-link {
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.admin-nav-link:hover {
+    background-color: rgba(212, 207, 207, 0.479);
+    color: #fff;
+}
+
+/* Logout Button */
+.admin-logout-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.admin-logout-btn {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Main Content */
+.admin-dashboard-main-content {
+    flex: 1;
+    padding: 50px;
+    background-color: #f5f5f5;
+    margin-left: 290px;
+}
+
+.admin-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #302b5f, #201b28);
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-dashboard-header h1 {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    font-family: 'DM-Sans';
+}
+
+/* Section Styling */
+.admin-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #302b5f, #201b28);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.admin-section h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: 'League-Spartan';
+}
+
+.admin-section-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #52adad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.admin-section-btn:hover {
+    background-color: #6ec9c9;
+}
+
+/* Auction Table */
+.admin-auction-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #52adad, #2f6276);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.admin-auction-table th, .admin-auction-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: left;
+}
+
+.admin-auction-table th {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.status-active {
+    color: lime;
+}
+
+.status-closed {
+    color: rgb(223, 121, 121);
+}
+
+.status-upcoming {
+    color: orange;
+}
+
+.admin-auction-edit-btn, .admin-auction-delete-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.admin-auction-edit-btn {
+    background: #007BFF;
+}
+
+.admin-auction-delete-btn {
+    background: #dc3545;
+}
+
+.admin-auction-edit-btn:hover {
+    background: #0056b3;
+}
+
+.admin-auction-delete-btn:hover {
+    background: #c82333;
+}
+
+/* Admin Buttons */
+
+.admin-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin-edit-btn, .admin-delete-btn {
+    display: inline-block;
+    padding: 8px 10px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    vertical-align: middle;
+}
+
+.admin-edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.admin-edit-btn:hover {
+    background-color: #45a049;
+}
+
+.admin-delete-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    margin-left: 5px;
+}
+
+.admin-delete-btn:hover {
+    background-color: #c9302c;
+}
+
+/* Admin Save and Cancel Buttons */
+.admin-save-btn, .admin-cancel-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-save-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+}
+
+.admin-save-btn:hover {
+    background-color: #0056b3;
+}
+
+.admin-cancel-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+.admin-cancel-btn:hover {
+    background-color: #545b62;
+}
+
+/* Admin Edit Auction */
+
+.admin-edit-auction-page {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #52adad, #2f6276);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styling */
+.admin-edit-auction-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    text-align: left;
+    font-family: 'League-Spartan';
+}
+
+.admin-edit-auction-container h2 {
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 40px;
+    font-family: 'DM-Sans';
+}
+
+.admin-edit-auction-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+.admin-edit-auction-container input,
+.admin-edit-auction-container textarea {
+    width: 95%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.admin-edit-auction-container input:focus,
+.admin-edit-auction-container textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styling */
+
+.admin-edit-auction-container button {
+    background-color: #52adad; 
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.admin-edit-auction-container button:hover {
+    background-color: #4f9292;
+}
+
+/* Back to Admin Link */
+.admin-edit-auction-container a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #52adad;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    align-items: center;
+}
+
+.admin-edit-auction-container a:hover {
+    color: #4f9292;
+}
+
+/* Winner Column Styles */
+.winner-name {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.no-winner {
+    color: rgb(209, 202, 202);
+    font-style: italic;
+}
+
